@@ -49,13 +49,15 @@ export function CreateTaskButton() {
 
   const onSubmit = async (data: TaskFormData) => {
     try {
-      const response = await fetch('/api/tasks', {
+      const response = await fetch('https://localhost:5157/TaskManagement', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
+
+      console.log(JSON.stringify(data));
 
       if (!response.ok) {
         throw new Error('Failed to create task');

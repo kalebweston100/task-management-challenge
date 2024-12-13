@@ -2,8 +2,8 @@ import { TaskList } from '@/components/task-list';
 import { CreateTaskButton } from '@/components/create-task-button';
 
 async function getTasks() {
-  const res = await fetch('http://localhost:3000/api/tasks', {
-    cache: 'no-store'
+  const res = await fetch('http://localhost:5157/TaskManagement', {
+    cache: 'no-store',
   });
 
   if (!res.ok) {
